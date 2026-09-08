@@ -9,6 +9,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/fast-io" />
+            <option value="$PROJECT_DIR$/linear-ds" />
+            <option value="$PROJECT_DIR$/problems" />
             <option value="$PROJECT_DIR$/tree" />
           </set>
         </option>
