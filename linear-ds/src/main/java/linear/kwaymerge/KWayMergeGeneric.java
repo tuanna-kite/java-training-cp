@@ -7,7 +7,7 @@ public class KWayMergeGeneric {
     private record Candidate<T>(Iterator<? extends T> it, T value) { }
 
     static <T> List<T> merge(
-            List<? extends Iterable<? extends T>> sources,
+            Iterable<? extends Iterable<? extends T>> sources,
             Comparator<? super T> comparator
     ) {
         Objects.requireNonNull(sources, "sources");
