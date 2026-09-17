@@ -12,19 +12,21 @@ public class Solution {
         }
 
         int ans = 0;
+
         int c0 = remains[0];
-        ans += c0 * (c0 - 1) / 2;
+        int c01 = c0 - 1;
+        if(c0 % 2 == 0) c0 /= 2;
+        else c01 /= 2;
+        ans += c0 * c01;
 
         int c30 = remains[30];
-        ans += c30 * (c30 - 1) / 2;
-
-
-        for (int i = 0; i < 60; i++) {
-            if (remains[i] != 0) { System.out.println(i + " - " + remains[i]); }
-        }
+        int c301 = c30 - 1;
+        if(c30 % 2 == 0) c30 /= 2;
+        else c301 /= 2;
+        ans += c30 * c301;
 
         for (int i = 1; i <= 29; i++) {
-            ans += remains[i] * remains[60 - i];
+            ans += remains[i] * remains[60-i];
         }
 
         return ans;
